@@ -1,0 +1,68 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<section class="section">   
+    <h2>Forum - Share Information</h2>
+
+    {% if user.is_authenticated %}
+        <form method="POST">
+            {% csrf_token %}
+            <textarea name="text" placeholder="Your message" required></textarea>
+            <button type="submit">Post</button>
+        </form>
+    {% else %}
+        <p>You must <a href="{% url 'login' %}">log in</a> to post a message.</p>
+    {% endif %}
+
+    {% for msg in messages %}
+        <div class="message">
+
+            <div class="message-header">
+                <strong>{{ msg.user.username }}</strong>
+                <small class="timestamp">{{ msg.date }}</small>
+            </div>
+
+            <div class="message-text">
+                {{ msg.text }}
+            </div>
+
+            <div class="message-actions">
+                {% if msg.user != user %}
+                    <button class="link-button" onclick="document.getElementById('reply-{{ msg.id }}').style.display='block'">
+                        Reply
+                    </button>
+                {% endif %}
+
+                {% if perms.main.can_moderate or msg.user == user %}
+                    <a href="{% url 'edit_message' msg.id %}" class="edit-btn">Edit</a>
+
+                    <form action="{% url 'delete_message' msg.id %}" method="post" class="delete-form">
+                        {% csrf_token %}
+                        <button type="submit" class="delete-btn">Delete</button>
+                    </form>
+                {% endif %}
+            </div>
+
+        </div>
+
+        <!-- Reply form -->
+        <form id="reply-{{ msg.id }}" method="post" style="display:none; margin-left:20px;">
+            {% csrf_token %}
+            <textarea name="text" placeholder="Write a reply..."></textarea>
+            <input type="hidden" name="parent_id" value="{{ msg.id }}">
+            <button type="submit">Send Reply</button>
+        </form>
+
+        <!-- Show replies -->
+        {% for reply in msg.replies.all %}
+            <div class="reply" style="margin-left:40px;">
+                <p><strong>{{ reply.user.username }}</strong>: {{ reply.text }} <small>{{ reply.date }}</small></p>
+            </div>
+        {% endfor %}
+
+        <hr>
+    {% empty %}
+        <p>No messages yet.</p>
+    {% endfor %}
+</section>
+{% endblock %}

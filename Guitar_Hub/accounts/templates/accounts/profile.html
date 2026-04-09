@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="section">
+    <h2>Your Profile</h2>
+
+    <div style="display:flex; gap:20px; align-items:flex-start;">
+        
+        <!-- Avatar -->
+        <div>
+            <img src="{{ user.profile.avatar.url }}" 
+                 style="width:120px; height:120px; border-radius:50%; object-fit:cover;">
+        </div>
+
+        <!-- Profile Info -->
+        <div>
+            <p><strong>Username:</strong> {{ user.username }}</p>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Joined:</strong> {{ user.date_joined|date:"F j, Y" }}</p>
+            <p><strong>Last login:</strong> {{ user.last_login|date:"F j, Y, H:i" }}</p>
+        </div>
+    </div>
+
+    <hr/>
+
+    <h3>Edit Profile</h3>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ profile_form.as_p }}
+        <button type="submit" id="save-btn">Save Changes</button>
+    </form>
+
+</div>
+{% endblock %}
