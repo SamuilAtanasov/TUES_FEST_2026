@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="section">
+    <h2>Types of Giutars</h2>
+
+    <p>There are several main types of guitars, each with its own sound and purpose:</p>
+
+    <h3>Acoustic Guitar</h3>
+    <img src="{% static 'images/acoustic.jpg' %}" alt="Acoustic Guitar" class="guitar-img">
+    <p>The acoustic guitar produces sound acoustically by transmitting the vibration of the strings to the air.It's known for its warm, natural tone. Perfect for beginners and singer-songwriters.</p>
+
+    <h3>Electric Guitar</h3>
+    <img src="{% static 'images/electric.jpg' %}" alt="Electric Guitar" class="guitar-img">
+    <p>Electric guitars use pickups to convert string vibrations into electrical signals. It's used in rock, metal, blues and jazz. Requires an amplifier.</p>
+    
+    <h3>Classical Guitar</h3>
+    <img src="{% static 'images/classical.jpg' %}" alt="Classical Guitar" class="guitar-img">
+    <p>Classical guitars use nylon strings and have a warm, mellow tone.They are ideal for classical and flamenco music.</p>
+
+    <h3>Bass Guitar</h3>
+    <img src="{% static 'images/bass.jpg' %}" alt="Bass Guitar" class="guitar-img">
+    <p>The bass guitar provides the low-end foundation in most modern music genres. Comes in 4-string and 5-string versions.</p>
+</section>
+{% endblock %}

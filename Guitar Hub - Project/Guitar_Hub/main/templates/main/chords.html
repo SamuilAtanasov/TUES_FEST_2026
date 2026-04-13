@@ -1,4 +1,5 @@
 {% extends 'main/base.html' %}
+{% load static %}
 
 {% block content %}
 <section class="section">
@@ -8,10 +9,15 @@
 
     <ul>
         <li><strong>C Major</strong> - one of the easiest chords</li>
+        <img src="{% static 'images/C-Major.jpg' %}" alt="C Major Chord" class="chord-img">
         <li><strong>G Major</strong> - very common in songs</li>
+        <img src="{% static 'images/G-Major.jpg' %}" alt="G Major Chord" class="chord-img">
         <li><strong>D Major</strong> - bright and clean sound</li>
+        <img src="{% static 'images/D-Major.jpg' %}" alt="D Major Chord" class="chord-img">
         <li><strong>E Major</strong> - simple and emotional</li>
+        <img src="{% static 'images/E-Major.jpg' %}" alt="E Major Chord" class="chord-img">
         <li><strong>A Major</strong> - perfect for beginners</li>
+        <img src="{% static 'images/A-Major.jpg' %}" alt="A Major Chord" class="chord-img">
     </ul>
 
     <p>You can add diagrams or images later if you wish.</p>
