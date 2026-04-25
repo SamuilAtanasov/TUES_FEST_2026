@@ -1,0 +1,41 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<h2>Guitars Chords - Page 3</h2>
+
+<div class="chord-box">
+    <h3>G Major</h3>
+    <img src="{% static 'images/G-Major.jpg' %}" class="chord-img">
+    <p>Very common in songs and nice.</p>
+</div>
+<div class="chord-box">
+    <h3>G7</h3>
+    <img src="{% static 'images/G-Seven.jpg' %}" class="chord-img">
+    <p>Classical dominant 7 chord leading to C major.</p>
+</div>
+
+<div class="chord-box">
+    <h3>A Minor</h3>
+    <img src="{% static 'images/A-Minor.jpg' %}" class="chord-img">
+    <p>Soft, emotional minor chord used in many songs.</p>
+</div>
+
+<div class="chord-box">
+    <h3>A Major</h3>
+    <img src="{% static 'images/A-Major.jpg' %}" class="chord-img">
+    <p>One of the easiest chords and perfect for beginners.</p>
+</div>
+
+<div class="chord-box">
+    <h3>A7</h3>
+    <img src="{% static 'images/A-Seven.jpg' %}" class="chord-img">
+    <p>Bluesy dominat 7 chord leading to D major.</p>
+</div>
+
+<!-- Pagination -->
+ <div class="pagination">
+    <a href="{% url 'chords_page_2' %}">← Previous</a>
+ </div>
+
+{% endblock %}

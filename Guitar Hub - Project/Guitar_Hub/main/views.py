@@ -12,6 +12,15 @@ def types_page(request):
 def chords_page(request):
     return render(request, "main/chords.html")
 
+def chords_page_1(request):
+    return render(request, "main/chords_page_1.html")
+
+def chords_page_2(request):
+    return render(request, "main/chords_page_2.html")
+
+def chords_page_3(request):
+    return render(request, "main/chords_page_3.html")
+
 def tips_page(request):
     return render(request, "main/tips.html")
 

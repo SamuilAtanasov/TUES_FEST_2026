@@ -1,0 +1,42 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<h2>Guitars Chords - Page 1</h2>
+
+<div class="chord-box">
+    <h3>C Major</h3>
+    <img src="{% static 'images/C-Major.jpg' %}" class="chord-img">
+    <p>Basic major chord used in many songs.</p>
+</div>
+
+<div class="chord-box">
+    <h3>C7</h3>
+    <img src="{% static 'images/C-Seven.jpg' %}" class="chord-img">
+    <p>Dominant 7 chord with a bluesy sound.</p>
+</div>
+
+<div class="chord-box">
+    <h3>D Minor</h3>
+    <img src="{% static 'images/D-Minor.jpg' %}" class="chord-img">
+    <p>Beautiful minor chord with emotional tone.</p>
+</div>
+
+<div class="chord-box">
+    <h3>D Major</h3>
+    <img src="{% static 'images/D-Major.jpg' %}" class="chord-img">
+    <p>It has bright, clean and beautiful sound.</p>
+</div>
+
+<div class="chord-box">
+    <h3>D7</h3>
+    <img src="{% static 'images/D-Seven.jpg' %}" class="chord-img">
+    <p>Bright dominant 7 chord used in folk and blues.</p>
+</div>
+
+<!-- Pagination -->
+ <div class="pagination">
+    <a href="{% url 'chords_page_2' %}">Next →</a>
+ </div>
+
+{% endblock %}

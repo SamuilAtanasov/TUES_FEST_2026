@@ -2,40 +2,14 @@
 {% load static %}
 
 {% block content %}
-<section class="section">
-    <h2>Basic chords</h2>
+<h2>Guitar chords</h2>
 
-    <p>Here are some of the most common beginner chords:</p>
+<p>Select a page to view the chords:</p>
 
-    <ul>
-        <li><strong>C Major</strong> - one of the easiest chords</li>
-        <img src="{% static 'images/C-Major.jpg' %}" alt="C Major Chord" class="chord-img">
-        <li><strong>C Seven</strong> - used in blues, jazz, and songs that need a strong resolution</li>
-        <img src="{% static 'images/C-Seven.jpg' %}" alt="C Seven Chord" class="chord-img">
-        <li><strong>G Major</strong> - very common in songs</li>
-        <img src="{% static 'images/G-Major.jpg' %}" alt="G Major Chord" class="chord-img">
-        <li><strong>G Seven</strong> - warm, classic sound and is common in blues, jazz, and pop progressions</li>
-        <img src="{% static 'images/G-Seven.jpg' %}" alt="G Seven Chord" class="chord-img">
-        <li><strong>D Major</strong> - bright and clean sound</li>
-        <img src="{% static 'images/D-Major.jpg' %}" alt="D Major Chord" class="chord-img">
-        <li><strong>D Minor</strong> - sad, dramatic tone and is common in classical and ballad music</li>
-        <img src="{% static 'images/D-Minor.jpg' %}" alt="D Minor Chord" class="chord-img">
-        <li><strong>D Seven</strong> -  bright, slightly bluesy sound and is used in folk, country, and jazz</li>
-        <img src="{% static 'images/D-Seven.jpg' %}" alt="D Seven Chord" class="chord-img">
-        <li><strong>E Major</strong> - simple and emotional</li>
-        <img src="{% static 'images/E-Major.jpg' %}" alt="E Major Chord" class="chord-img">
-        <li><strong>E Minor</strong> - soft, emotional sound and appears in many modern songs</li>
-        <img src="{% static 'images/E-Minor.jpg' %}" alt="E Minor Chord" class="chord-img">
-        <li><strong>E Seven</strong> - used in blues, rock, and jazz to create tension before resolving</li>
-        <img src="{% static 'images/E-Seven.jpg'%}" alt="E Seven Chord" class="chord-img">
-        <li><strong>A Major</strong> - perfect for beginners</li>
-        <img src="{% static 'images/A-Major.jpg' %}" alt="A Major Chord" class="chord-img">
-        <li><strong>A Minor</strong> - soft, melancholic sound and appears in countless songs across all genres</li>
-        <img src="{% static 'images/A-Minor.jpg'%}" alt="A Minor Chord" class="chord-img">
-        <li><strong>A Seven</strong> - very common in blues, rock, and jazz progressions</li>
-        <img src="{% static 'images/A-Seven.jpg' %}" alt="A Seven Chord" class="chord-img">
-    </ul>
+<div class="pagination">
+    <a href="{% url 'chords_page_1' %}">Page 1</a>
+    <a href="{% url 'chords_page_2' %}">Page 2</a>
+    <a href="{% url 'chords_page_3' %}">Page 3</a>
+</div>
 
-    <p>You can add diagrams or images later if you wish.</p>
-</section>
 {% endblock %}

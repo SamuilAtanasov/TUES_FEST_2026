@@ -3,49 +3,80 @@
 
 {% block content %}
 <section class="section">
-    <h2>The History of the Guitar</h2>
 
-    <img src="{% static 'images/first_guitar.jpg ' %}" alt="Guitar History" class="history-img">
+    <!-- Section 1 -->
+    <div class="clearfix">
 
-    <p>
-        The guitar is one of the world’s most popular and recognizable musical instruments, 
-        but its origins go back thousands of years. The earliest stringed instruments similar 
-        to the guitar appeared around 3,000–4,000 years ago in ancient civilizations such as 
-        Mesopotamia and Egypt. These early instruments had long necks and resonating bodies, 
-        and were played with fingers or picks.
-    </p>
+        <img src="{% static 'images/first_guitar.jpg ' %}" alt="Guitar History" class="float-img-left">
 
-    <img src="{% static 'images/evolution-of-guitars.jpg' %}" alt="Evolution of Guitars" class="history-img">
-    
-    <p>
-        During the Middle Ages, instruments like the <strong>lute</strong> and the 
-        <strong>oud</strong> became popular in Europe and the Middle East. These instruments 
-        heavily influenced the shape and construction of the modern guitar. Over time, 
-        craftsmen experimented with different body shapes, numbers of strings, and tuning systems.
-    </p>
+        <h3>Ancient Origins</h3>
 
-    <img src="{% static 'images/renaissance-guitar.jpg' %}" alt="renaissance Guitar" class="history-img">
+        <p>
+            The guitar has one of the longest and most fascinating histories among musical instruments. 
+            Its origins can be traced back more than 4,000 years to ancient civilizations such as 
+            Mesopotamia and Egypt. Early stringed instruments like the tanbur and the oud laid the 
+            foundation for what would eventually become the modern guitar.
+        </p>
+        
+        <p>
+            These early instruments were simple, with a small resonating body and a long neck, 
+            but they introduced the essential idea of plucked strings producing musical tones. 
+            Over centuries, different cultures adapted and redesigned these instruments, creating 
+            new shapes, tunings, and playing techniques.
+        </p>
+    </div>
 
-    <p>
-        By the Renaissance period, the guitar began to take on a more familiar form. 
-        It typically had four or five courses of strings and was used for both solo 
-        performance and accompaniment. In the 19th century, Spanish luthier
-        <strong>Antonio Torres</strong> revolutionized guitar design by creating the 
-        larger-bodied classical guitar, which greatly improved volume and tone.
-    </p>
+    <!-- Section 2 -->
+     <div class="clearfix">
+        <img src="{% static 'images/renaissance-guitar.jpg' %}" alt="Renaissance Guitar" class="float-img-right">
+        <h3>The Renaissance Guitar</h3>
 
-    <img src="{% static 'images/modern-guitar.jpg' %}" alt="Modern Guitar" class="history-img">
+        <p>
+            By the Renaissance period, the guitar began to take on a more familiar form. 
+            It typically had four or five courses of strings and was used for both solo 
+            performance and accompaniment. In the 19th century, Spanish luthier
+            <strong>Antonio Torres</strong> revolutionized guitar design by creating the 
+            larger-bodied classical guitar, which greatly improved volume and tone. 
+        </p>
 
-    <p>
-        The 20th century brought even more innovation with the invention of the 
-        <strong>electric guitar</strong>. This transformed modern music and became the 
-        foundation of genres like rock, blues, jazz, and metal. Today, the guitar continues 
-        to evolve, combining traditional craftsmanship with modern technology.
-    </p>
+        <p>
+            During the Middle Ages and Renaissance, the guitar began to take a more recognizable form. 
+            Instruments such as the lute and vihuela were extremely popular in Europe and influenced 
+            the guitar’s evolution. By the 16th century, the guitar had four courses of strings and 
+            was used for both accompaniment and solo performance.
+        </p>
+    </div>
 
-    <p>
-        The guitar’s long journey from ancient instruments to modern electric models 
-        shows how deeply it is connected to human creativity and culture.
-    </p>
+    <!-- Section 3 -->
+     <div class="clearfix">
+        <img src="{% static 'images/modern-guitar.jpg' %}" alt="Modern Guitar" class="float-img-left">
+        <h3>The Modern Electric Guitar</h3>
+
+        <p>
+            The 20th century brought even more innovation with the invention of the 
+            <strong>electric guitar</strong>. This transformed modern music and became the 
+            foundation of genres like rock, blues, jazz, and metal. Today, the guitar continues 
+            to evolve, combining traditional craftsmanship with modern technology. That transformed
+            modern music forever.
+        </p>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="clearfix">
+        <img src="{% static 'images/evolution-of-guitars.jpg' %}" alt="Evolution of Guitars" class="float-img-right">
+        <h3>The Evolution of Guitars</h3>
+
+        <p>
+            The guitar’s long journey from ancient instruments to modern electric models 
+            shows how deeply it is connected to human creativity and culture. From ancient 
+            instruments to modern electric models, the guitar’s journey reflects human 
+            creativity, innovation, and passion for music.
+        </p>
+
+        <p>
+            Today, the guitar continues to evolve, combining traditional craftsmanship with
+            modern technology.
+        </p>
+    </div>
 </section>
 {% endblock %}

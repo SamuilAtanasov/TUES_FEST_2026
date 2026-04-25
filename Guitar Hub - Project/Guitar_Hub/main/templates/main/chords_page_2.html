@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<h2>Guitars Chords - Page 2</h2>
+
+<div class="chord-box">
+    <h3>E Minor</h3>
+    <img src="{% static 'images/E-Minor.jpg' %}" class="chord-img">
+    <p>One of the easiest and most popular minor chords.</p>
+</div>
+
+<div class="chord-box">
+    <h3>E7</h3>
+    <img src="{% static 'images/E-Seven.jpg' %}" class="chord-img">
+    <p>Brigth dominant 7 used in blues and rock.</p>
+</div>
+
+<div class="chord-box">
+    <h3>E Major</h3>
+    <img src="{% static 'images/E-Major.jpg' %}" class="chord-img">
+    <p>Important chord that often requires a barre shape.</p>
+</div>
+
+<!-- Pagination -->
+ <div class="pagination">
+    <a href="{% url 'chords_page_1' %}">← Previous</a>
+    <a href="{% url 'chords_page_3' %}">Next →</a>
+ </div>
+
+{% endblock %}
